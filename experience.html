@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="utf-8">
     <title>Katherine J. | Work hard, play hard</title>
     <link rel="stylesheet" href="stylesheets/sammy-style.css">
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1QX9H47DMP"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1QX9H47DMP');
+    </script>
   </head>
+
+
+
   <body>
     <header>
       <p><a href="index.html">Katherine J.</a></p>
@@ -33,21 +47,19 @@
         <a href="https://github.com/ksj21/student-site">source code</a>
       </p>
     </footer>
-
+   
     <script type="text/javascript">
 
-        //
-        // FYI: this is a website interactivity teaser...
-        //
-        //var resumeButton = document.getElementById("download-resume")
-        //
-        //function handleClick(event) {
-        //    console.log("YOU CLICKED ME!")
-        //    console.log(event.target)
-        //}
-        //
-        //resumeButton.addEventListener("click", handleClick, false)
-
+      var resumeButton = document.getElementById("download-resume")
+  
+      function handleClick() {
+          console.log("YOU CLICKED ME!")
+          // send event to GA
+          gtag("event", "resume_download")
+      }
+  
+      resumeButton.addEventListener("click", handleClick, false)
+  
     </script>
   </body>
 </html>
